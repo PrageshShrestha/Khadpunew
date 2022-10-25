@@ -1,0 +1,39 @@
+import pytesseract 
+import cv2
+from playsound import playsound
+import os
+import time
+from PIL import Image
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
+print("!!!!!Enter the full directory name!!!!!")
+file_name = str(input("Enter the file name(/n to skip):"))#D:\citizenship\ghanta.jpg
+# folder_name = str(input("Enter the folder name:"))#D:\datascience\quotes
+def function_file_ocr(a):
+    file = cv2.imread(a)
+    text = pytesseract.image_to_string(file)
+    saving_file = input("enter file name to save including directory:")#D:\datascience\hello.txt
+    f = open(saving_file , "w")
+    f.write(text)
+    #playsound("beep.mp3")
+    f.close()
+# def function_folder_ocr(b):
+#     list = []
+#     #for each in b:
+#     arr = os.listdir('.')
+#     for each in arr:
+#         if each in arr:
+#             file = cv2.imread(each)
+#             text = pytesseract.image_to_string(file)
+#             saving_file = input("enter file name to save including directory:")
+#             f = open(saving_file , "w")
+#             f.write(text +"/n")
+#             f.close()
+if file_name !="":
+    function_file_ocr(file_name)  
+
+# else:
+    # print("unknown input")     elif folder_name != "":
+    # function_folder_ocr(folder_name)
+time.sleep(10)       
+        
