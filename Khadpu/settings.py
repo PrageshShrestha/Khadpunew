@@ -28,6 +28,8 @@ DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1','https://khampu.herokuapp.com/']
 
 
+SESSION_COOKIE_SECURE = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 # Application definition
 
 INSTALLED_APPS = [
