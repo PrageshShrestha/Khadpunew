@@ -3,6 +3,7 @@ from .models import Images , Gallery , Politics
 from django.contrib import messages
 from django.db.models import Q
 def frontpage(request):
+    #must add some thing like qwen , bert for ml integration
     # if request.method == 'POST':
     #     query = request.POST.get('query')
     #     places_for = Images.objects.filter(
